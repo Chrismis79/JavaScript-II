@@ -78,8 +78,8 @@ console.log(runnersLargeSizeShirt);
 
 // ==== Challenge 4: Use .reduce() ====
 // The donations need to be tallied up and reported for tax purposes. Add up all the donations and save the total into a ticketPriceTotal variable.
-let ticketPriceTotal = runners[i].donation.reduce((accum, curr) => {
-  return accum + curr;
+let ticketPriceTotal = runners.reduce((accum, curr) => {
+  return accum + curr.donation;
 }, 0);
     
 console.log(ticketPriceTotal);
@@ -93,6 +93,14 @@ let nameEmail = runners.map((item) =>{
 })
 console.log(nameEmail);
 
-// Problem 2
+// Problem 2 Log the last name and the company each person works for.
+let nameCompany = runners.map((item) => {
+  return `${item.last_name} works for ${item.company_name}`; 
+})
+console.log(nameCompany);
 
-// Problem 3
+
+// Problem 3 get the average donation amout
+let avgDonation = ticketPriceTotal / runners.length;
+console.log(avgDonation);
+

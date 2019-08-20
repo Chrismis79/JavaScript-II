@@ -69,12 +69,12 @@ function multiplyNums(x, y, cb) {
 let product = multiplyNums(3,7);
 console.log(product);
 
-// function contains(item, list, cb) {
-//   // contains checks if an item is present inside of the given array/list.
-//   // Pass true to the callback if it is, otherwise pass false.
-//   return cb(list.inclues(item));
-// }
-// contains('Gum', items, console.log);
+function contains(item, list, cb) {
+  // contains checks if an item is present inside of the given array/list.
+  // Pass true to the callback if it is, otherwise pass false.
+  return cb(list.includes(item));
+}
+contains('Gum', items, console.log);
 
 /* STRETCH PROBLEM */
 

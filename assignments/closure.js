@@ -4,6 +4,24 @@
 // that manipulates variables defined in the outer scope.
 // The outer scope can be a parent function, or the top level of the script.
 
+function world(){
+  let ruler = 'Christine Fletcher';
+  console.log(`${ruler} rules the world!`);
+
+  function country(){
+    let president = "GI Jane";
+    console.log(`${president} wants ${ruler}\'s head!`);
+
+    function state(){
+      let whistleBlower = 'Glen Whistle'
+      console.log(`${whistleBlower} tells ${ruler} of ${president}\'s planned attack.`)
+    }
+    state();
+  }
+  country();
+}
+world();
+
 
 /* STRETCH PROBLEMS, Do not attempt until you have completed all previous tasks for today's project files */
 
